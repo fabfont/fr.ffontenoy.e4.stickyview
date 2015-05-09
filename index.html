@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="fr.ffontenoy.e4.stickyview : This is a pure eclipse e4 RCP plugin that allows to define a sticky view">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>fr.ffontenoy.e4.stickyview</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/fabfont/fr.ffontenoy.e4.stickyview">View on GitHub</a>
+
+          <h1 id="project_title">fr.ffontenoy.e4.stickyview</h1>
+          <h2 id="project_tagline">This is a pure eclipse e4 RCP plugin that allows to define a sticky view</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/fabfont/fr.ffontenoy.e4.stickyview/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/fabfont/fr.ffontenoy.e4.stickyview/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="frffontenoye4stickyview" class="anchor" href="#frffontenoye4stickyview" aria-hidden="true"><span class="octicon octicon-link"></span></a>fr.ffontenoy.e4.stickyview</h1>
+
+<h2>
+<a id="what-is-this-frffontenoye4stickyview-for" class="anchor" href="#what-is-this-frffontenoye4stickyview-for" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is this fr.ffontenoy.e4.stickyview for?</h2>
+
+<p>This plugin is used for easily creating a sticky view for a pure e4 application. A sticky view is a view that can be displayed on every defined perspective and that remains displayed when switching to another perspective.
+This can be used for example for implementing a help window (next coming project).</p>
+
+<h2>
+<a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use it?</h2>
+
+<p>In order to defined your own sticky view, you just need to extend the extension point <code>stickyviewExtensionPoint</code> giving the following attributes:</p>
+
+<ul>
+<li>
+<code>partId</code>: The id that will be given to the created part. This id will also be used as a basis for the open/close command and handler.</li>
+<li>
+<code>containerData</code>: Usual container data. Used in particular for defining the opening size</li>
+<li>
+<code>position</code>: Defines the opening position. Should be one of left, right, top or bottom;</li>
+<li>
+<code>partClass</code>: Defines the class for the part implementation. This should be a usual part implementation for E4 (with a @PostConstruct)</li>
+<li>
+<code>label</code>: Defines the label of the part (used for the tab label).</li>
+<li>
+<code>visibleAtStartup</code>: Defines whether the sticky view should be displayed at startup or not. Should be true or false.</li>
+<li>
+<code>shortcut</code>: The shortcut sequence for opening and closing the sticky view (e.g.: M1+M2+H)</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">fr.ffontenoy.e4.stickyview maintained by <a href="https://github.com/fabfont">fabfont</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
