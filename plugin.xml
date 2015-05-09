@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension-point id="stickyviewExtensionPoint" name="Sticky View" schema="schema/stickyview.exsd"/>
+
+   <extension
+         id="fr.ffontenoy.e4.stickyview.fragment"
+         point="org.eclipse.e4.workbench.model">
+      <processor
+            apply="always"
+            beforefragment="false"
+            class="fr.ffontenoy.e4.stickyview.processors.Processor">
+      </processor>
+   </extension>
+
+</plugin>
