@@ -35,6 +35,7 @@ import org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl;
 import org.eclipse.e4.ui.workbench.modeling.EModelService;
 import org.eclipse.e4.ui.workbench.modeling.EPartService;
 
+import fr.ffontenoy.e4.stickyview.StickyViewConstants;
 import fr.ffontenoy.e4.stickyview.extensionpoints.StickyViewExtensionAttribute;
 import fr.ffontenoy.e4.stickyview.extensionpoints.StickyViewExtensionPosition;
 import fr.ffontenoy.e4.stickyview.handlers.OpenCloseStickyView;
@@ -55,7 +56,7 @@ public class Processor {
    * Binding context id
    */
   private static final String BINDING_CONTEXT_ID = "org.eclipse.ui.contexts.dialogAndWindow";
-
+  
   /**
    * The window containing the perspective stack
    */
@@ -214,6 +215,7 @@ public class Processor {
           lBindingTable.setElementId(lId + "BindingTable");
 
           MKeyBinding lKeyBinding = MCommandsFactory.INSTANCE.createKeyBinding();
+          lKeyBinding.setElementId(StickyViewConstants.KEY_BINDING_ID);
           lKeyBinding.setKeySequence(lShortcut);
           lKeyBinding.setCommand(lCommand);
 
